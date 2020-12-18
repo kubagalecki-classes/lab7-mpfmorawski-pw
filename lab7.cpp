@@ -81,15 +81,33 @@ void zadanie4()
     }
 }
 
+/* Zadanie 5 */
+
+float podziel(int a, int b)
+{
+    if (b == 0)
+        throw 0;
+    else
+        return (float)a / (float)b;
+}
+
+void zadanie5(int a, int b)
+{
+    try {
+        std::cout << podziel(a, b) << std::endl;
+    }
+    catch (int& i) {
+        std::cout << "Nie możesz dzielić przez " << i << std::endl;
+    }
+}
+
 int main()
 {
-    zadanie4();
+    zadanie5(1, 2);
+    zadanie5(20, 0);
 }
 
 /* Po uruchomieniu otrzymano:
-  Podaj liczbe a
-  10
-  Podaj liczbe b
-  3
-  Unexpected index
+  0.5
+  Nie możesz dzielić przez 0
 */
