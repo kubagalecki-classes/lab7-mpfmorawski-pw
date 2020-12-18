@@ -101,13 +101,36 @@ void zadanie5(int a, int b)
     }
 }
 
+/* Zadanie 6 */
+class Informer
+{
+public:
+    Informer() { std::cout << "Utworzono Informera" << std::endl; }
+    ~Informer() { std::cout << "Zniszczono Informera" << std::endl; }
+};
+
+void zadanie7(int a, int b)
+{
+    try {
+        Informer informer1;
+        std::cout << podziel(a, b) << std::endl;
+    }
+    catch (int& i) {
+        std::cout << "Nie możesz dzielić przez " << i << std::endl;
+    }
+}
+
 int main()
 {
-    zadanie5(1, 2);
-    zadanie5(20, 0);
+    zadanie7(1, 2);
+    zadanie7(20, 0);
 }
 
 /* Po uruchomieniu otrzymano:
+  Utworzono Informera
   0.5
+  Zniszczono Informera
+  Utworzono Informera
+  Zniszczono Informera
   Nie możesz dzielić przez 0
 */
