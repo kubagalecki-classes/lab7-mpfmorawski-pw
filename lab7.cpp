@@ -58,9 +58,32 @@ void zadanie3()
     }
 }
 
+/* Zadanie 4 */
+
+void zadanie4()
+{
+    int a, b;
+    std::cout << "Podaj liczbe a" << std::endl;
+    std::cin >> a;
+    std::cout << "Podaj liczbe b" << std::endl;
+    std::cin >> b;
+    try {
+        std::vector< int >                      wektor(a, 0);
+        std::variant< int, float, std::string > wariant;
+        if (b % 2 == 0)
+            wariant = 42;
+        else
+            wariant = "nieparzyste";
+        std::cout << std::get< int >(wariant) << std::endl;
+    }
+    catch (const std::exception& e) {
+        std::cout << e.what() << std::endl;
+    }
+}
+
 int main()
 {
-    zadanie3();
+    zadanie4();
 }
 
 /* Po uruchomieniu otrzymano:
