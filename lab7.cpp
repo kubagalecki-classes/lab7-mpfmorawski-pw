@@ -109,7 +109,7 @@ public:
     ~Informer() { std::cout << "Zniszczono Informera" << std::endl; }
 };
 
-void zadanie7(int a, int b)
+void zadanie6(int a, int b)
 {
     try {
         Informer informer1;
@@ -122,8 +122,8 @@ void zadanie7(int a, int b)
 
 int main()
 {
-    zadanie7(1, 2);
-    zadanie7(20, 0);
+    zadanie6(1, 2);
+    zadanie6(20, 0);
 }
 
 /* Po uruchomieniu otrzymano:
